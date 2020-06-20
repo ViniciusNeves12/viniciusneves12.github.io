@@ -1,0 +1,75 @@
+body{
+    background-color: #c2c5dfc0;
+}
+
+header{
+
+    background-color: rgba(106, 124, 204, 0.726);
+    width: 45%;
+    padding: 30px;
+    margin: 20px auto 5px ;
+    text-align: center;
+    ;
+}
+
+form{
+
+    background-color: whitesmoke;
+    width: 45%;
+    padding:30px;
+    margin: 0 auto;
+}
+fieldset{
+    width: 80%;
+    padding: 10px;
+    margin: 5px auto;
+}
+.botoes{
+
+    text-align: center;
+}
+
+.benviar{
+
+    background-image:url("../imagens/botao-enviar1.png");
+    width: 90px;
+    height: 35px;
+    border: 0;
+}
+
+.bcancelar{
+    background-image: url("../imagens/botao-cancelar1.png");
+    width: 90px;
+    height: 35px;
+    border: 0;
+}
+
+.ft1{
+
+    background-image: url(../imagens/icone-contato.png);
+    background-repeat: no-repeat;
+    background-position: 94% 90% ;
+}
+.ft2{
+
+    background-image: url(../imagens/icone-endereco.png);
+    background-repeat: no-repeat;
+    background-position: 94% 90% ;
+
+}
+.ft3{
+    background-image: url(../imagens/icone-mensagem.png);
+    background-repeat: no-repeat;
+    background-position: 94% 90% ;
+
+}
+.ft4{
+
+    background-image: url(../imagens/icone-pagamento.png);
+    background-repeat: no-repeat;
+    background-position: 94% 90% ;
+}
+img{
+
+    width: 30px;
+}

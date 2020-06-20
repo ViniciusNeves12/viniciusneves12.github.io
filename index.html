@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Projeto Formulário</title>
+		<link rel="stylesheet" href="css/cssFormulario.css">
+		<script>
+			function calculaTotal1(){
+ 
+				let totalDigitado = document.getElementById("area1").value;
+				let totalDisponivel = 255 - totalDigitado.length;
+				document.getElementById("numero1").innerHTML= totalDisponivel;
+			}
+
+		</script>
+    </head>
+    <body>
+
+		<header>
+			<h1>Formulário de Cadastro</h1>
+			<p>
+				*Este formulário serve como um pré-cadastro em nossos sistemas para reservas de ingressos.
+				Posteriormente entraremos em contato para evitar fraudes.</p>
+
+			<p> Após o cadastro, verifique sua caixa de e-mail e aguarde o contato da equipe.</p>
+
+		</header>
+
+		<form>
+			<fieldset class="ft1">  
+				<legend>Identificação do usuário</legend>
+				<p>Nome:   <input type="text" required placeholder="Digite aqui seu nome completo..." size="30"></p>
+				<p>Senha:  <input type="password" required placeholder="Máximo 15 caracteres..." size="30" maxlength="15"></p> 
+				<p>E-mail: <input type="email" required placeholder="Informe seu E-mail..."size="29"> </p>
+				<p>Data de Nascimento: <input type="date"></p>  
+
+				<fieldset>
+					<legend>Sexo:</legend>
+					<label>
+						<p><input type="radio" name="sexo">Masculino</p>
+					</label>
+					<label>
+						<p><input type="radio" name="sexo">Feminino</p>
+					</label>
+					
+
+				</fieldset>
+
+			</fieldset>
+			<br>
+			<fieldset class="ft2">
+				<legend>Endereço do Usuário</legend>
+				<p>Rua: <input type="text" required placeholder="Av. Rua. Alameda. Viela."></p>
+				<p>Número: <input type="number" required placeholder="Residencial"></p>
+				<p>Estado: 
+					<select>
+						<option value="SP">São Paulo</option>
+						<option value="RJ">Rio de Janeiro</option>
+						<option value="MG">Minas Gerais</option>
+						<option value="SC">Santa Catarina</option>
+						<option value="RS">Rio Grande do Sul</option>
+					</select></p>
+				<p>Cidade: <input type="text" required placeholder="Sua Cidade"></p>
+
+			</fieldset>
+
+			<br>
+
+			<fieldset class="ft3">
+				<legend>Mensagem Usuário</legend>
+				<p>Grau de Interesse: <input type="number" readonly id="grau" size="1"></p>
+				<p><input type="range" id="cRange" min="0" max="10" oninput="grau.value = cRange.value"></p>
+				<p>Mensagem: </p>
+				<p><textarea id="area1" maxlength="255" cols="40" rows="8" onkeyup="calculaTotal1()"></textarea></p>
+				Caracteres Restantes: <span style="color: red;" id="numero1">255</span> 
+
+			</fieldset>
+			
+			<br>
+
+			<fieldset class="ft4">
+				<legend>Quero meu ingresso</legend>
+				<p><input type="checkbox"> Confirmo o interesse em adiquirir ingressos para jogos da Copa do Mundo FIFA 2018.</p>
+
+				<fieldset>
+					<legend>Agendar dados para pagamento</legend>
+					<p>Titular do cartão: <input type="text" required placeholder="Conforme impresso no cartão." size="25px"></p>
+					<p>Número do cartão: <input type="number" required placeholder="9999.9999.9999.9999" size="23px"></p>
+					<p>Vencimento:
+						<select>
+							<option value="1">Janeiro</option>
+							<option value="2">Fevereiro</option>
+							<option value="3">Março</option>
+							<option value="4">Abril</option>
+							<option value="5">Maio</option>
+							<option value="6">Junho</option>
+							<option value="7">Julho</option>
+							<option value="8">Agosto</option>
+							<option value="9">Setembro</option>
+							<option value="10">Outubro</option>
+							<option value="11">Novembro</option>
+							<option value="12">Dezembro</option>
+
+						</select>
+						/ <input type="number" required placeholder="Ano..." size="14">
+					</p>
+
+					<p><label>
+						<p><input type="radio" name="cartao"> <img src="imagens/bdCartão1.png">  </p>
+					</label>
+					<label>
+						<p><input type="radio" name="cartao"> <img src="imagens/bdCartão2.png"></p>
+					</label></p>
+					<label>
+						<p><input type="radio" name="cartao"> <img src="imagens/bdCartão3.png"></p>
+					</label>
+					<label>
+						<p><input type="radio" name="cartao"> <img src="imagens/bdCartao4.png"></p>
+					</label>
+					<label>
+						<p><input type="radio" name="cartao"> <img src="imagens/bdCartão5.png"></p >
+					</label>
+					<label>
+						<p><input type="radio" name="cartao"> <img src="imagens/bdCartão1.png"></p>
+					</label>
+
+				</fieldset>
+	
+				<p>Grau de Interesse: <input type="number1" readonly id="grau1"  size="1"></p>
+				<p><input type="range" id="cRange1" min="0" max="10" oninput="grau1.value = cRange1.value"></p>
+
+			</fieldset>
+
+			<p class="botoes"><input class="benviar" value="" type="submit" >  <input class="bcancelar" value="" type="submit"></p>
+
+		</form>
+
+
+        
+    </body>
+</html>
